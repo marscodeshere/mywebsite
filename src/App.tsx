@@ -16,7 +16,7 @@ export default function App() {
         <Nav variant="underline" className="bg-body-tertiary" defaultActiveKey="/">
           <Nav.Item>
             <NavLink to="/" className="nav-link">
-              <Image src='./assets/logo2.png' fluid />
+              <Image src='/assets/logo2.png' fluid />
             </NavLink>
           </Nav.Item>
           <Nav.Item>
