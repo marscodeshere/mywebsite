@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <Container fluid>
             <div>
-                <p>Hello, testing home.</p>
+                <p>Hello, testing contact.</p>
             </div>
         </Container>
     );

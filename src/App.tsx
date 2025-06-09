@@ -1,7 +1,11 @@
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 import './App.css';
-import Home from './Home.tsx'
+import Home from './Home.tsx';
+import About from './About.tsx';
+import Coding from './Coding.tsx';
+import Art from './Art.tsx';
+import Contact from './Contact.tsx';
 
 export default function App() {
 
@@ -9,26 +13,30 @@ export default function App() {
   return (
     <main>
       <Router>
-        <Nav variant="tabs" className="bg-body-tertiary">
+        <Nav variant="underline" className="bg-body-tertiary" defaultActiveKey="/">
           <Nav.Item>
             <NavLink to="/" className="nav-link">MOMENS Studios</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/" className="nav-link">About</NavLink>
+            <NavLink to="/about" className="nav-link">About</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/" className="nav-link">Coding</NavLink>
+            <NavLink to="/coding" className="nav-link">Coding</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/" className="nav-link">Art</NavLink>
+            <NavLink to="/art" className="nav-link">Art</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/" className="nav-link">Contact</NavLink>
+            <NavLink to="/contact" className="nav-link">Contact</NavLink>
           </Nav.Item>
         </Nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/coding" element={<Coding />} />
+        <Route path="/art" element={<Art />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
     </Router>
