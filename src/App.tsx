@@ -6,6 +6,7 @@ import About from './About.tsx';
 import Coding from './Coding.tsx';
 import Art from './Art.tsx';
 import Contact from './Contact.tsx';
+import logo from './assets/logo2.png'
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
         <Nav variant="underline" className="bg-body-tertiary" defaultActiveKey="/">
           <Nav.Item>
             <NavLink to="/" className="nav-link">
-              <Image src='/assets/logo2.png' fluid />
+              <Image src={logo} fluid />
             </NavLink>
           </Nav.Item>
           <Nav.Item>
