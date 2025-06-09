@@ -11,6 +11,6 @@ Amplify.configure(outputs);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App data-bs-theme="dark"/>
+    <App />
   </React.StrictMode>
 );

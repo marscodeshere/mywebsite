@@ -1,6 +1,8 @@
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 import './App.css';
+import Home from './Home.tsx'
+
 export default function App() {
 
 
@@ -26,7 +28,7 @@ export default function App() {
         </Nav>
 
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
       </Routes>
 
     </Router>
