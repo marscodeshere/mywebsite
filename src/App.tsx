@@ -1,4 +1,4 @@
-import { Nav, Image } from "react-bootstrap";
+import { Nav, Image, Navbar, Container} from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 import './App.css';
 import Home from './Home.tsx';
@@ -6,7 +6,7 @@ import About from './About.tsx';
 import Coding from './Coding.tsx';
 import Art from './Art.tsx';
 import Contact from './Contact.tsx';
-import logo from './assets/logo2.png'
+import logo from './assets/logo3.png'
 
 export default function App() {
 
@@ -14,25 +14,23 @@ export default function App() {
   return (
     <main>
       <Router>
-        <Nav variant="underline" className="bg-body-tertiary" defaultActiveKey="/">
-          <Nav.Item>
-            <NavLink to="/" className="nav-link">
-              <Image src={logo} fluid />
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/about" className="nav-link">About</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/coding" className="nav-link">Coding</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/art" className="nav-link">Art</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/contact" className="nav-link">Contact</NavLink>
-          </Nav.Item>
-        </Nav>
+        <Navbar expand="lg">
+          <Image src={logo} id="nav-logo"/>
+          <Container id="nav-container">
+            <Navbar.Brand>
+              <NavLink to="/" className="nav-link">MOMENS Studios</NavLink>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <NavLink to="/about" className="nav-link">About</NavLink>
+                  <NavLink to="/coding" className="nav-link">Coding</NavLink>
+                  <NavLink to="/art" className="nav-link">Art</NavLink>
+                  <NavLink to="/contact" className="nav-link">Contact</NavLink>
+                </Nav>
+              </Navbar.Collapse>
+          </Container>
+      </Navbar>
 
       <Routes>
         <Route path="/" element={<Home />} />
