@@ -20,5 +20,9 @@ code {
 
 .nav-link:hover {
   color: green;
-  border-bottom: 0.1em solid green;
+}
+
+#nav-container {
+  margin-left: 0;
+  margin-right: 0;
 }
