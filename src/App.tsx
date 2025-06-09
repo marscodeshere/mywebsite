@@ -1,4 +1,4 @@
-import Nav from "react-bootstrap/Nav";
+import { Nav, Image } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 import './App.css';
 import Home from './Home.tsx';
@@ -15,7 +15,9 @@ export default function App() {
       <Router>
         <Nav variant="underline" className="bg-body-tertiary" defaultActiveKey="/">
           <Nav.Item>
-            <NavLink to="/" className="nav-link">MOMENS Studios</NavLink>
+            <NavLink to="/" className="nav-link">
+              <Image src='./assets/logo2.png' fluid />
+            </NavLink>
           </Nav.Item>
           <Nav.Item>
             <NavLink to="/about" className="nav-link">About</NavLink>
