@@ -1,40 +1,41 @@
-import { useEffect, useState } from "react";
-import type { Schema } from "../amplify/data/resource";
-import { generateClient } from "aws-amplify/data";
+import Nav from "react-bootstrap/Nav";
+import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
+import './App.css';
+export default function App() {
 
-const client = generateClient<Schema>();
-
-function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
-
-  useEffect(() => {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }, []);
-
-  function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
-  }
 
   return (
     <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
-        ))}
-      </ul>
-      <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
-      </div>
+      <Router>
+        <Nav variant="tabs" className="bg-body-tertiary">
+          <Nav.Item>
+            <NavLink to="/" className="nav-link">MOMENS Studios</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/" className="nav-link">About</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/" className="nav-link">Coding</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/" className="nav-link">Art</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/" className="nav-link">Contact</NavLink>
+          </Nav.Item>
+        </Nav>
+
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
+
+    </Router>
+
+    <footer className="mt-4 text-muted">
+      <p>&copy; {new Date().getFullYear()} MOMENS Studios. All rights reserved.</p>
+    </footer>
+
     </main>
   );
 }
 
-export default App;
