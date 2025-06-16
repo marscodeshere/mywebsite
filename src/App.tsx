@@ -30,8 +30,7 @@ export default function App() {
                 </Nav>
               </Navbar.Collapse>
           </Container>
-      </Navbar>
-
+        </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
