@@ -6,11 +6,12 @@ footer {
 }
 
 nav {
-  position:sticky;
+  position:fixed;
   top: 0;
   z-index: 3;
   background-color: rgb(2, 9, 4);
   font-weight: 2em;
+  margin-bottom: 1em;
 }
 
 #nav-logo {
@@ -24,10 +25,18 @@ nav {
   height: 5em;
   z-index: 3;
   margin-bottom: 1em;
+  background-color: rgb(2, 9, 4);
 }
 
 #nav-container {
   position: fixed;
   top: 2em;
   left: 3em;
+  background-color: rgb(2, 9, 4);
+  margin-bottom: 1em;
+}
+
+.pageContent {
+  text-align: center;
+
 }
