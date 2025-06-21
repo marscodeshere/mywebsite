@@ -1,7 +1,6 @@
 .pageContent {
     text-align: center;
-  
-  }
+}
   
 .card-img-overlay {
 opacity: 0%;
@@ -14,4 +13,18 @@ opacity: 20%;
 
 .card:hover > .card-img-overlay {
 opacity: 100%;
+}
+
+.card-group {
+    margin: 2em;
+}
+
+.card {
+    border-color: rgb(51, 56, 53);
+}
+
+.artHeaders {
+    background-color: rgb(51, 56, 53);
+    margin: 2em;
+    border: none;
 }
