@@ -1,0 +1,17 @@
+.pageContent {
+    text-align: center;
+  
+  }
+  
+  .card-img-overlay {
+    opacity: 0%;
+    background-color: rgb(51, 56, 53);
+  }
+  
+  .card:hover > .card-img {
+    opacity: 20%;
+  }
+  
+  .card:hover > .card-img-overlay {
+    opacity: 100%;
+  }
