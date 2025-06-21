@@ -14,9 +14,9 @@ export default function Home() {
             <h1>Marley Omens</h1>
             <p>IT Professional / Certified AWS & Web Developer / Artist</p>
             
-            <Carousel pause="hover" controls={false} touch={true}>
+            <Carousel pause="hover" prevIcon="" nextIcon="" touch={true}>
                 <Carousel.Item interval={3000}>
-                    <Image src={logo} className="carouselImage"/>
+                    <Image src={logo} className="carouselImage" />
                     <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -39,6 +39,8 @@ export default function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>
+
+
         </Container>
     );
 }

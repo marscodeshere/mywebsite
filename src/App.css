@@ -38,16 +38,21 @@ nav {
 
 div.carousel-caption {
   color: white;
-  
+  opacity: 0%;
+}
+
+div.carousel-item:hover > div.carousel-caption {
+  color: white;
+  opacity: 100%;
 }
 
 div.carousel-item {
-  height: 20em;
+  height: 30em;
 }
 
 .carouselImage {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .carousel .carousel-indicators button {
