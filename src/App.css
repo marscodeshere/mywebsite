@@ -36,3 +36,20 @@ nav {
   margin-bottom: 1em;
 }
 
+div.carousel-caption {
+  color: white;
+  
+}
+
+div.carousel-item {
+  height: 20em;
+}
+
+.carouselImage {
+  height: 100%;
+  width: auto;
+}
+
+.carousel .carousel-indicators button {
+  background-color: white;
+}
