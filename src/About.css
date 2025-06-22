@@ -1,0 +1,41 @@
+.card {
+    margin: 1em;
+    border: none;
+}
+
+.accordion {
+    margin: 1em;
+    border-radius: 1em;
+}
+
+.list-group-item:hover {
+    color: rgb(51, 56, 53);
+}
+
+button.btn.btn-primary {
+    background-color: rgb(51, 56, 53);
+    border: none;
+}
+
+button.btn.btn-outline-primary {
+    background-color: none;
+    border-color: rgb(51, 56, 53);
+    color: white;
+    margin: 0.5em;
+}
+
+button.btn.btn-outline-primary:hover {
+    background-color:rgb(51, 56, 53); 
+}
+
+.text-muted {
+    opacity: 40%;
+}
+
+#summary .card-title {
+    margin-bottom: 1em;
+}
+
+.row {
+    margin-top: 2em;
+}
