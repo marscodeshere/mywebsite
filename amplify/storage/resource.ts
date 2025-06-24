@@ -6,5 +6,9 @@ export const storage = defineStorage({
     'website-folder/*': [
         allow.guest.to(['read']),
     ],
-  })
+    'website-art/*': [
+    allow.guest.to(['read']),
+    ],
+  }),
+  
 });
