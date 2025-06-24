@@ -19,9 +19,9 @@ export default function Home() {
             
             <CardGroup>
                 <Card>
-                    <Card.Img>
+                    
                         <StorageImage alt="test" path="website-folder/me.png" />
-                    </Card.Img>
+                    
                     <Card.ImgOverlay>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
