@@ -35,12 +35,9 @@ export default function Home() {
                             <Card.Text>
                             This will be where I will put my resume summary section.
                             </Card.Text>
-                            
+                            <Card.Subtitle className="mb-2 text-muted">Socials are on Contact Page</Card.Subtitle>
                             <Card.Link onClick={getResume} target="_blank" href={linkHref}>
                                 <Button>Resume</Button>
-                            </Card.Link>
-                            <Card.Link href="#">
-                                <Button>Socials</Button>
                             </Card.Link>
                         </Card.Body>
                     </Card>

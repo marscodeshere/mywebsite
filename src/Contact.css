@@ -1,0 +1,20 @@
+.socials:hover {
+    opacity: 60%;
+}
+
+button.btn.btn-secondary {
+    background-color: rgb(2,9,4);
+    border: none;
+    border-radius: 50%;
+}
+
+button.btn.btn-secondary > img {
+    height: 4em;
+    width: 3.5em;
+}
+
+#socialLinks {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 2em;;
+}
