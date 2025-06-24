@@ -3,15 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { StorageImage } from '@aws-amplify/ui-react-storage';
 import "./Art.css";
 
-const art = [
-    {header: "Painting Projects", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-    {header: "Cosplay 2024", photo1: "3dprint2.JPG", photo2: "3dprint2.JPG", photo3: "3dprint2.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-    {header: "Halloween 2024", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-    {header: "Cosplay 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-    {header: "Halloween 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-]
 
 export default function Home() {
+
+    
+    const art = [
+        {header: "Painting Projects", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+        {header: "Cosplay 2024", photo1: "3dprint2.JPG", photo2: "3dprint2.JPG", photo3: "3dprint2.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+        {header: "Halloween 2024", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+        {header: "Cosplay 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+        {header: "Halloween 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+    ];
 
     return (
         <Container fluid className="pageContent">

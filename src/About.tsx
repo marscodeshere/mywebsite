@@ -5,25 +5,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './About.css';
 
 
-const skills = [
-    {skill: "Languages", option1: "Java", option2: "Javascript"},
-    {skill: "Softwares", option1: "Microsoft", option2: "Excel", option3: "Cash Management"},
-    {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelrors in IT"}
-];
-
-const [linkHref, setLinkHref] = useState("");
-
-async function getResume() {
-    const linkToResume = await getUrl({
-        path: "website-folder/resume2024.pdf",
-    });
- 
-    setLinkHref(linkToResume.url.toString())
-}
-
-
-
 export default function Home() {
+
+    const skills = [
+        {skill: "Languages", option1: "Java", option2: "Javascript"},
+        {skill: "Softwares", option1: "Microsoft", option2: "Excel", option3: "Cash Management"},
+        {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelrors in IT"}
+    ];
+
+    const [linkHref, setLinkHref] = useState("");
+
+    async function getResume() {
+        const linkToResume = await getUrl({
+            path: "website-folder/resume2024.pdf",
+        });
+    
+        setLinkHref(linkToResume.url.toString())
+    }
+
     return (
         <Container className="pageContent" fluid>
             <h1>Marley Omens</h1>
