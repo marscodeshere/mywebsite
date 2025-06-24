@@ -1,9 +1,13 @@
 import {Container, Card, CardGroup} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./assets/logo3.png";
+import { StorageImage } from '@aws-amplify/ui-react-storage';
 import "./Art.css";
 
+
+
 export default function Home() {
+
     return (
         <Container fluid className="pageContent">
             <h1>Marley Omens</h1>
@@ -15,7 +19,9 @@ export default function Home() {
             
             <CardGroup>
                 <Card>
-                    <Card.Img src={logo} alt="Card image" />
+                    <Card.Img>
+                        <StorageImage alt="test" path="website-folder/me.png" />
+                    </Card.Img>
                     <Card.ImgOverlay>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
