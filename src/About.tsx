@@ -1,24 +1,18 @@
 import { Accordion, Button, Container, Card, Col, OverlayTrigger, ListGroup, Row, Popover} from "react-bootstrap";
+import { getUrl } from 'aws-amplify/storage';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './About.css';
 
 
-const languages = ["JavaScript", "Java", "Python"];
+const skills = [
+    {skill: "Languages", option1: "Java", option2: "Javascript"},
+    {skill: "Softwares", option1: "Microsoft", option2: "Excel", option3: "Cash Management"},
+    {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelrors in IT"}
+];
 
-const CodingItem =  (
-    <OverlayTrigger placement="bottom" overlay={
-        <Popover id="codingPopover">
-            <Popover.Header as="h3">Languages</Popover.Header>
-            <Popover.Body>
-                <ListGroup variant="flush">
-                    {languages.map((l) => <ListGroup.Item>{l}</ListGroup.Item>)}
-                </ListGroup>
-            </Popover.Body>
-        </Popover>
-        }>
-      <Button variant="outline-primary">Coding</Button>
-    </OverlayTrigger>
-  );
+const linkToResume = await getUrl({
+  path: "website-folder/resume2024.pdf",
+});
 
 export default function Home() {
     return (
@@ -34,7 +28,7 @@ export default function Home() {
                             This will be where I will put my resume summary section.
                             </Card.Text>
                             
-                            <Card.Link href="#">
+                            <Card.Link href={linkToResume.url.toString()} target="_blank">
                                 <Button>Resume</Button>
                             </Card.Link>
                             <Card.Link href="#">
@@ -49,10 +43,24 @@ export default function Home() {
                         <Card.Body>
                             <Card.Title>Skills & Certifications</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Hover to See More</Card.Subtitle>
-                                {CodingItem}
+                                {skills.map((s) => 
+    
+                                    <OverlayTrigger placement="bottom" overlay={
+                                        <Popover id="codingPopover">
+                                            <Popover.Header as="h3">{s.skill}</Popover.Header>
+                                            <Popover.Body>
+                                                <ListGroup variant="flush">
+                                                    <ListGroup.Item>{s?.option1}</ListGroup.Item>
+                                                    <ListGroup.Item>{s?.option2}</ListGroup.Item>
+                                                    <ListGroup.Item>{s?.option3}</ListGroup.Item>
+                                                </ListGroup>
+                                            </Popover.Body>
+                                        </Popover>
+                                        }>
+                                        <Button variant="outline-primary">{s.skill}</Button>
+                                    </OverlayTrigger>
 
-                                {CodingItem}
-
+                                )}
                         </Card.Body>
                     </Card>
                 </Col>
