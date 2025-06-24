@@ -1,5 +1,6 @@
 import { Accordion, Button, Container, Card, Col, OverlayTrigger, ListGroup, Row, Popover} from "react-bootstrap";
 import { getUrl } from 'aws-amplify/storage';
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './About.css';
 
@@ -10,9 +11,17 @@ const skills = [
     {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelrors in IT"}
 ];
 
-const linkToResume = await getUrl({
-  path: "website-folder/resume2024.pdf",
-});
+const [linkHref, setLinkHref] = useState("");
+
+async function getResume() {
+    const linkToResume = await getUrl({
+        path: "website-folder/resume2024.pdf",
+    });
+ 
+    setLinkHref(linkToResume.url.toString())
+}
+
+
 
 export default function Home() {
     return (
@@ -28,7 +37,7 @@ export default function Home() {
                             This will be where I will put my resume summary section.
                             </Card.Text>
                             
-                            <Card.Link href={linkToResume.url.toString()} target="_blank">
+                            <Card.Link onClick={getResume} target="_blank" href={linkHref}>
                                 <Button>Resume</Button>
                             </Card.Link>
                             <Card.Link href="#">
