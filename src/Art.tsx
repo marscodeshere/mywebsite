@@ -8,11 +8,14 @@ export default function Home() {
 
     
     const art = [
-        {header: "Painting Projects", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-        {header: "Cosplay 2024", photo1: "3dprint2.JPG", photo2: "3dprint2.JPG", photo3: "3dprint2.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-        {header: "Halloween 2024", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-        {header: "Cosplay 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
-        {header: "Halloween 2023", photo1: "3dprint1.JPG", photo2: "3dprint1.JPG", photo3: "3dprint1.JPG", title1: "photo1", title2: "photo2", title3: "photo3"},
+        {header: "Painting Projects", photo1: "IMG_1955.JPG", photo2: "IMG_2507.JPG", photo3: "shirtsBleach5.JPG", title1: "Arcane Painted Cup", title2: "Neva Painted Controller", title3: "Chainsawman Bleached Shirt", year: "2025"},
+        {header: "Cosplay 2024", photo1: "IMG_2194.JPG", photo2: "IMG_1965.JPG", photo3: "IMG_1971.JPG", title1: "Holiday Matsuri 2024", title2: "Zagreus Bow", title3: "Zagreus Cosplay Redo", year: "2024"},
+        {header: "Halloween 2024", photo1: "MPZX3956.JPG", photo2: "IMG_1805[1].JPG", photo3: "IMG_1781[1].JPG", title1: "Disney Portraits", title2: "Nightmare Before Christmas", title3: "Storm from X-Men", year: "2024"},
+        {header: "Cosplay 2023", photo1: "IMG_1177.JPG", photo2: "IMG_1141.JPG", photo3: "IMG_1148.JPG", title1: "Holiday Matsuri 2023", title2: "Old vs New", title3: "Printed Cerberus Skull", year: "2023"},
+        {header: "Halloween 2023", photo1: "IMG_1060.JPG", photo2: "IMG_1058.JPG", photo3: "IMG_1002.JPG", title1: "Giant Gengar", title2: "The Crew", title3: "Guess that Pokemon", year: "2023"},
+        {header: "Cosplay 2022", photo1: "IMG_0669.JPG", photo2: "IMG_1152.JPG", photo3: "3dmodel4.png", title1: "Holiday Matsuri 2022", title2: "Emblem for 2023", title3: "Crown for 2023", year: "2022"},
+        {header: "Halloween 2022", photo1: "IMG_1103.JPG", photo2: "IMG_0493.JPG", photo3: "MWGL8486.JPG", title1: "Demogorgon", title2: "Vecna", title3: "Demogorgon Final", year: "2022"},
+        {header: "3D Models", photo1: "3dmodel1.png", photo2: "3dmodel2.png", photo3: "3dmodel3.png", title1: "Cerberus Skull Model", title2: "Shield Model", title3: "Skull Belt Model", year: "2024"},
     ];
 
     return (
@@ -28,41 +31,29 @@ export default function Home() {
 
                 <CardGroup>
                     <Card>
-                        <StorageImage alt="test" path={`website-art/${a.photo1}`} />
+                        <StorageImage alt="test" path={`website-folder/${a.photo1}`} />
                         <Card.ImgOverlay>
                             <Card.Title>{a.title1}</Card.Title>
-                            <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
-                            </Card.Text>
                             <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
+                            <small className="text-muted">{a.year}</small>
                             </Card.Footer>
                         </Card.ImgOverlay>
                     </Card>
                     <Card>
-                        <StorageImage alt="test" path={`website-art/${a.photo2}`} />
+                        <StorageImage alt="test" path={`website-folder/${a.photo2}`} />
                         <Card.ImgOverlay>
                             <Card.Title>{a.title2}</Card.Title>
-                            <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
-                            </Card.Text>
                             <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
+                            <small className="text-muted">{a.year}</small>
                             </Card.Footer>
                         </Card.ImgOverlay>
                     </Card>
                     <Card>
-                        <StorageImage alt="test" path={`website-art/${a.photo3}`} />
+                        <StorageImage alt="test" path={`website-folder/${a.photo3}`} />
                         <Card.ImgOverlay>
                             <Card.Title>{a.title3}</Card.Title>
-                            <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
-                            </Card.Text>
                             <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
+                            <small className="text-muted">{a.year}</small>
                             </Card.Footer>
                         </Card.ImgOverlay>
                     </Card>
