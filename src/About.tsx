@@ -8,16 +8,22 @@ import './About.css';
 export default function Home() {
 
     const skills = [
-        {skill: "Languages", option1: "Java", option2: "Javascript"},
-        {skill: "Softwares", option1: "Microsoft", option2: "Excel", option3: "Cash Management"},
-        {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelrors in IT"}
+        {skill: "Languages", option1: "Java", option2: "Javascript", option3: "Python", option4: "React", option5: "SQL", option6: "HTML/CSS/JS"},
+        {skill: "Softwares", option1: "Microsoft", option2: "Excel", option3: "Cash Management", option4: "AWS Services", option5: "3D Rendering Programs"},
+        {skill: "Degrees", option1: "Associates in Arts", option2: "Bachelors in IT", option3: "Certification in Web Dev", option4: "Multiple AWs Certs"}
     ];
+
+    const experience = [
+        {title: "Barista Trainer", company: "Starbucks", timeframe: "Nov 2021-Present", explanation1: "Maintaining the customer experience while balancing the responsibilities of the business.", explanation2: "Encouraged the team to exceed expectations and increase customer engagement."},
+        {title: "Full-Time Cashier", company: "Aldi", timeframe: "May 2021-Nov 2021", explanation1: "Optimized efficiency and speed while creating an experience for customers at the checkout lanes.", explanation2: "Achieved top efficiency scores in the district during the first months of employment."},
+        {title: "Night Supervisor", company: "Wawa", timeframe: "Oct 2016-May 2021", explanation1: "Oversaw entire store and all divisions as Manager on Duty while sustaining company expectations.", explanation2: "Responsible for checking in vendors, handling the safe and counting registers, training and encouraging employees, and prioritizing customer satisfaction."},
+    ]
 
     const [linkHref, setLinkHref] = useState("");
 
     async function getResume() {
         const linkToResume = await getUrl({
-            path: "website-folder/resume2024.pdf",
+            path: "website-folder/Marley-Omens-AWS Developer - Web Developer - IT Professional- Online.pdf",
         });
     
         setLinkHref(linkToResume.url.toString())
@@ -75,38 +81,20 @@ export default function Home() {
                 <h2>Experience</h2>
                 <Col>
                     <Accordion flush>
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>
-                                <Col>Barista Trainer</Col>
-                                <Col className="text-muted">Starbucks</Col>
-                                <Col className="text-muted">2021-Present</Col>
-                            </Accordion.Header>
-                            <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>
-                                <Col>Student: IT Major</Col>
-                                <Col className="text-muted">Arizona State University</Col>
-                                <Col className="text-muted">2022-2025</Col>
-                            </Accordion.Header>
-                            <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                            </Accordion.Body>
-                        </Accordion.Item>
+
+                        {experience.map((e, index) =>
+                            <Accordion.Item eventKey={index.toString()}>
+                                <Accordion.Header>
+                                    <Col>{e.title}</Col>
+                                    <Col className="text-muted">{e.company}</Col>
+                                    <Col className="text-muted">{e.timeframe}</Col>
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <li>{e.explanation1}</li>
+                                    <li>{e.explanation2}</li>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        )}
                     </Accordion>
                 </Col>
             </Row>
