@@ -39,7 +39,10 @@ export default function Home() {
                         <Card.Body>
                             <Card.Title>A Little About Me</Card.Title>
                             <Card.Text>
-                            This will be where I will put my resume summary section.
+                            Web Developer and IT professional with over 12 years of expertise in MERN stack and cloud technologies, including AWS,
+                            SQL, and MySQL. Demonstrates a strong ability to innovate and optimize web solutions, leveraging skills in Java, React, and
+                            Python to drive digital transformations. Passionate about creating dynamic, user-friendly web applications while fostering
+                            collaborative team environments and exceeding client expectations.
                             </Card.Text>
                             <Card.Subtitle className="mb-2 text-muted">Socials are on Contact Page</Card.Subtitle>
                             <Card.Link onClick={getResume} target="_blank" href={linkHref}>

@@ -39,3 +39,7 @@ button.btn.btn-outline-primary:hover {
 .row {
     margin-top: 2em;
 }
+
+li {
+    text-align: left;
+}
