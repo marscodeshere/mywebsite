@@ -1,0 +1,16 @@
+.pageContent {
+    text-align: center;
+}
+
+.card-group {
+    text-align: left;
+}
+
+.card-link {
+    text-decoration: none;
+    color: white;
+}
+
+.card-link:hover {
+    color: rgb(51, 56, 53);
+}
